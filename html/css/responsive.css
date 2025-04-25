@@ -1,0 +1,141 @@
+/* Responsive Styles */
+
+/* Large Desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-5xl);
+  }
+  
+  .waitlist-form {
+    padding: var(--space-8);
+  }
+}
+
+/* Medium Desktops (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero-title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .features {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+  
+  .feature-card {
+    padding: var(--space-4);
+  }
+  
+  .feature-card h3 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .feature-card p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .header-content {
+    height: 70px;
+  }
+  
+  .nav-desktop {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  main {
+    margin-top: 70px;
+  }
+  
+  .hero {
+    padding: var(--space-8) 0;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .waitlist {
+    padding: var(--space-8) 0;
+  }
+  
+  .waitlist-header {
+    margin-bottom: var(--space-6);
+  }
+  
+  .payment-methods {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-2);
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Small Mobile (up to 576px) */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-sm);
+  }
+  
+  .btn-large {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-base);
+  }
+  
+  .waitlist-form {
+    padding: var(--space-4);
+  }
+  
+  .form-group {
+    margin-bottom: var(--space-4);
+  }
+  
+  .form-group label {
+    font-size: var(--font-size-sm);
+  }
+  
+  .qr-image-container {
+    width: 120px;
+    height: 120px;
+  }
+}

@@ -1,0 +1,151 @@
+/* Animation Styles */
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Staggered Animations */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-item.visible {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Floating elements */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hover animation for feature icons */
+.feature-icon svg {
+  transition: transform var(--transition-normal);
+}
+
+.feature-card:hover .feature-icon svg {
+  transform: scale(1.1);
+}
+
+/* Pulse effect for the badge */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(110, 0, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(110, 0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(110, 0, 255, 0);
+  }
+}
+
+.badge {
+  animation: pulse 2s infinite;
+}
+
+/* Shimmer effect for glass cards */
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.glass-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 6s infinite;
+  pointer-events: none;
+}
+
+/* Scrolling light effect for payment section */
+@keyframes scrollingLight {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.payment-info {
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-info::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(110, 0, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  animation: scrollingLight 15s linear infinite;
+  pointer-events: none;
+}
+
+/* Mobile menu animations */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-mobile.active {
+  transform: translateY(0);
+}
